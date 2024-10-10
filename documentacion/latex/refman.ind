@@ -1,0 +1,207 @@
+\begin{theindex}
+
+  \item {alReves}
+    \subitem {ServicioEnEmisora.h}, \hyperpage{42}
+  \item {alternar}
+    \subitem {LED}, \hyperpage{16}
+  \item {apagar}
+    \subitem {LED}, \hyperpage{16}
+
+  \indexspace
+
+  \item {beaconUUID}
+    \subitem {Publicador}, \hyperpage{24}
+  \item {brillar}
+    \subitem {LED}, \hyperpage{16}
+
+  \indexspace
+
+  \item {CallbackConexionEstablecida}
+    \subitem {EmisoraBLE}, \hyperpage{10}
+  \item {CallbackConexionTerminada}
+    \subitem {EmisoraBLE}, \hyperpage{10}
+  \item {CO2}
+    \subitem {Publicador}, \hyperpage{21}
+  \item {cont}
+    \subitem {Loop}, \hyperpage{8}
+
+  \indexspace
+
+  \item {detenerAnuncio}
+    \subitem {EmisoraBLE}, \hyperpage{11}
+
+  \indexspace
+
+  \item {elLED}
+    \subitem {Globales}, \hyperpage{7}
+  \item {elMedidor}
+    \subitem {Globales}, \hyperpage{7}
+  \item {elPublicador}
+    \subitem {Globales}, \hyperpage{7}
+  \item {elPuerto}
+    \subitem {Globales}, \hyperpage{7}
+  \item {EmisoraBLE}, \hyperpage{9}
+    \subitem {CallbackConexionEstablecida}, \hyperpage{10}
+    \subitem {CallbackConexionTerminada}, \hyperpage{10}
+    \subitem {detenerAnuncio}, \hyperpage{11}
+    \subitem {EmisoraBLE}, \hyperpage{10}
+    \subitem {emitirAnuncioIBeacon}, \hyperpage{11}
+    \subitem {emitirAnuncioIBeaconLibre}, \hyperpage{11}
+    \subitem {encenderEmisora}, \hyperpage{12}
+    \subitem {estaAnunciando}, \hyperpage{13}
+    \subitem {fabricanteID}, \hyperpage{14}
+    \subitem {instalarCallbackConexionEstablecida}, \hyperpage{13}
+    \subitem {instalarCallbackConexionTerminada}, \hyperpage{13}
+    \subitem {nombreEmisora}, \hyperpage{14}
+    \subitem {txPower}, \hyperpage{14}
+  \item {emitirAnuncioIBeacon}
+    \subitem {EmisoraBLE}, \hyperpage{11}
+  \item {emitirAnuncioIBeaconLibre}
+    \subitem {EmisoraBLE}, \hyperpage{11}
+  \item {encender}
+    \subitem {LED}, \hyperpage{17}
+  \item {encenderEmisora}
+    \subitem {EmisoraBLE}, \hyperpage{12}
+    \subitem {Publicador}, \hyperpage{22}
+  \item {encendido}
+    \subitem {LED}, \hyperpage{18}
+  \item {escribir}
+    \subitem {PuertoSerie}, \hyperpage{25}
+  \item {esperar}
+    \subitem {LED.h}, \hyperpage{35}
+  \item {esperarDisponible}
+    \subitem {PuertoSerie}, \hyperpage{25}
+  \item {estaAnunciando}
+    \subitem {EmisoraBLE}, \hyperpage{13}
+
+  \indexspace
+
+  \item {fabricanteID}
+    \subitem {EmisoraBLE}, \hyperpage{14}
+
+  \indexspace
+
+  \item {Globales}, \hyperpage{7}
+    \subitem {elLED}, \hyperpage{7}
+    \subitem {elMedidor}, \hyperpage{7}
+    \subitem {elPublicador}, \hyperpage{7}
+    \subitem {elPuerto}, \hyperpage{7}
+
+  \indexspace
+
+  \item {HolaMundoIBeacon.ino}
+    \subitem {inicializarPlaquita}, \hyperpage{32}
+    \subitem {loop}, \hyperpage{32}
+    \subitem {lucecitas}, \hyperpage{32}
+    \subitem {setup}, \hyperpage{33}
+  \item {HolaMundoIBeacon/EmisoraBLE.h}, \hyperpage{27, 28}
+  \item {HolaMundoIBeacon/HolaMundoIBeacon.ino}, \hyperpage{31}
+  \item {HolaMundoIBeacon/LED.h}, \hyperpage{34, 35}
+  \item {HolaMundoIBeacon/Medidor.h}, \hyperpage{37}
+  \item {HolaMundoIBeacon/Publicador.h}, \hyperpage{38}
+  \item {HolaMundoIBeacon/PuertoSerie.h}, \hyperpage{40}
+  \item {HolaMundoIBeacon/ServicioEnEmisora.h}, \hyperpage{41}, 
+		\hyperpage{43}
+
+  \indexspace
+
+  \item {inicializarPlaquita}
+    \subitem {HolaMundoIBeacon.ino}, \hyperpage{32}
+  \item {iniciarMedidor}
+    \subitem {Medidor}, \hyperpage{19}
+  \item {instalarCallbackConexionEstablecida}
+    \subitem {EmisoraBLE}, \hyperpage{13}
+  \item {instalarCallbackConexionTerminada}
+    \subitem {EmisoraBLE}, \hyperpage{13}
+
+  \indexspace
+
+  \item {laEmisora}
+    \subitem {Publicador}, \hyperpage{24}
+  \item {LED}, \hyperpage{15}
+    \subitem {alternar}, \hyperpage{16}
+    \subitem {apagar}, \hyperpage{16}
+    \subitem {brillar}, \hyperpage{16}
+    \subitem {encender}, \hyperpage{17}
+    \subitem {encendido}, \hyperpage{18}
+    \subitem {LED}, \hyperpage{15}
+    \subitem {numeroLED}, \hyperpage{18}
+  \item {LED.h}
+    \subitem {esperar}, \hyperpage{35}
+  \item {Loop}, \hyperpage{8}
+    \subitem {cont}, \hyperpage{8}
+  \item {loop}
+    \subitem {HolaMundoIBeacon.ino}, \hyperpage{32}
+  \item {lucecitas}
+    \subitem {HolaMundoIBeacon.ino}, \hyperpage{32}
+
+  \indexspace
+
+  \item {MedicionesID}
+    \subitem {Publicador}, \hyperpage{21}
+  \item {Medidor}, \hyperpage{18}
+    \subitem {iniciarMedidor}, \hyperpage{19}
+    \subitem {Medidor}, \hyperpage{18}
+    \subitem {medirCO2}, \hyperpage{19}
+    \subitem {medirTemperatura}, \hyperpage{19}
+  \item {medirCO2}
+    \subitem {Medidor}, \hyperpage{19}
+  \item {medirTemperatura}
+    \subitem {Medidor}, \hyperpage{19}
+
+  \indexspace
+
+  \item {nombreEmisora}
+    \subitem {EmisoraBLE}, \hyperpage{14}
+  \item {numeroLED}
+    \subitem {LED}, \hyperpage{18}
+
+  \indexspace
+
+  \item {Publicador}, \hyperpage{20}
+    \subitem {beaconUUID}, \hyperpage{24}
+    \subitem {CO2}, \hyperpage{21}
+    \subitem {encenderEmisora}, \hyperpage{22}
+    \subitem {laEmisora}, \hyperpage{24}
+    \subitem {MedicionesID}, \hyperpage{21}
+    \subitem {Publicador}, \hyperpage{21}
+    \subitem {publicarCO2}, \hyperpage{22}
+    \subitem {publicarTemperatura}, \hyperpage{23}
+    \subitem {RSSI}, \hyperpage{24}
+    \subitem {RUIDO}, \hyperpage{21}
+    \subitem {TEMPERATURA}, \hyperpage{21}
+  \item {publicarCO2}
+    \subitem {Publicador}, \hyperpage{22}
+  \item {publicarTemperatura}
+    \subitem {Publicador}, \hyperpage{23}
+  \item {PuertoSerie}, \hyperpage{24}
+    \subitem {escribir}, \hyperpage{25}
+    \subitem {esperarDisponible}, \hyperpage{25}
+    \subitem {PuertoSerie}, \hyperpage{25}
+
+  \indexspace
+
+  \item {RSSI}
+    \subitem {Publicador}, \hyperpage{24}
+  \item {RUIDO}
+    \subitem {Publicador}, \hyperpage{21}
+
+  \indexspace
+
+  \item {ServicioEnEmisora}, \hyperpage{26}
+  \item {ServicioEnEmisora.h}
+    \subitem {alReves}, \hyperpage{42}
+    \subitem {stringAUint8AlReves}, \hyperpage{42}
+  \item {setup}
+    \subitem {HolaMundoIBeacon.ino}, \hyperpage{33}
+  \item {stringAUint8AlReves}
+    \subitem {ServicioEnEmisora.h}, \hyperpage{42}
+
+  \indexspace
+
+  \item {TEMPERATURA}
+    \subitem {Publicador}, \hyperpage{21}
+  \item {txPower}
+    \subitem {EmisoraBLE}, \hyperpage{14}
+
+\end{theindex}
