@@ -1,0 +1,96 @@
+\doxysection{Referencia de la clase Puerto\+Serie}
+\hypertarget{class_puerto_serie}{}\label{class_puerto_serie}\index{PuertoSerie@{PuertoSerie}}
+
+
+Clase para manejar la comunicación serie.  
+
+
+
+
+{\ttfamily \#include $<$Puerto\+Serie.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_puerto_serie_a8f0bfae3f90577642131689eab4489b1}{Puerto\+Serie}} (long baudios)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_puerto_serie}{Puerto\+Serie}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_puerto_serie_acdb696d30440a38dac61f5f73625935a}{esperar\+Disponible}} ()
+\begin{DoxyCompactList}\small\item\em Espera un breve momento para asegurar que el puerto serie esté disponible. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_puerto_serie_ab1b6cecc098aa30e5704dc294deec1f4}{escribir}} (T mensaje)
+\begin{DoxyCompactList}\small\item\em Escribe un mensaje en el puerto serie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para manejar la comunicación serie. 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_puerto_serie_a8f0bfae3f90577642131689eab4489b1}\index{PuertoSerie@{PuertoSerie}!PuertoSerie@{PuertoSerie}}
+\index{PuertoSerie@{PuertoSerie}!PuertoSerie@{PuertoSerie}}
+\doxysubsubsection{\texorpdfstring{PuertoSerie()}{PuertoSerie()}}
+{\footnotesize\ttfamily \label{class_puerto_serie_a8f0bfae3f90577642131689eab4489b1} 
+Puerto\+Serie\+::\+Puerto\+Serie (\begin{DoxyParamCaption}\item[{long}]{baudios}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_puerto_serie}{Puerto\+Serie}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em baudios} & Velocidad de comunicación en baudios.\\
+\hline
+\end{DoxyParams}
+Inicializa la comunicación serie con la velocidad especificada. 
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_puerto_serie_ab1b6cecc098aa30e5704dc294deec1f4}\index{PuertoSerie@{PuertoSerie}!escribir@{escribir}}
+\index{escribir@{escribir}!PuertoSerie@{PuertoSerie}}
+\doxysubsubsection{\texorpdfstring{escribir()}{escribir()}}
+{\footnotesize\ttfamily \label{class_puerto_serie_ab1b6cecc098aa30e5704dc294deec1f4} 
+template$<$typename T $>$ \\
+void Puerto\+Serie\+::escribir (\begin{DoxyParamCaption}\item[{T}]{mensaje}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Escribe un mensaje en el puerto serie. 
+
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & Tipo del mensaje a enviar. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parámetros}
+{\em mensaje} & El mensaje que se desea enviar al puerto serie.\\
+\hline
+\end{DoxyParams}
+Utiliza la función Serial.\+print para enviar el mensaje. Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{class_puerto_serie_ab1b6cecc098aa30e5704dc294deec1f4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_puerto_serie_acdb696d30440a38dac61f5f73625935a}\index{PuertoSerie@{PuertoSerie}!esperarDisponible@{esperarDisponible}}
+\index{esperarDisponible@{esperarDisponible}!PuertoSerie@{PuertoSerie}}
+\doxysubsubsection{\texorpdfstring{esperarDisponible()}{esperarDisponible()}}
+{\footnotesize\ttfamily \label{class_puerto_serie_acdb696d30440a38dac61f5f73625935a} 
+void Puerto\+Serie\+::esperar\+Disponible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Espera un breve momento para asegurar que el puerto serie esté disponible. 
+
+Esta función introduce un retraso de 10 milisegundos. Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{class_puerto_serie_acdb696d30440a38dac61f5f73625935a_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+Hola\+Mundo\+IBeacon/\mbox{\hyperlink{_puerto_serie_8h}{Puerto\+Serie.\+h}}\end{DoxyCompactItemize}

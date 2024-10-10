@@ -1,0 +1,130 @@
+\doxysection{Referencia del archivo Hola\+Mundo\+IBeacon/\+Hola\+Mundo\+IBeacon.ino}
+\hypertarget{_hola_mundo_i_beacon_8ino}{}\label{_hola_mundo_i_beacon_8ino}\index{HolaMundoIBeacon/HolaMundoIBeacon.ino@{HolaMundoIBeacon/HolaMundoIBeacon.ino}}
+{\ttfamily \#include $<$bluefruit.\+h$>$}\newline
+{\ttfamily \#include "{}LED.\+h"{}}\newline
+{\ttfamily \#include "{}Puerto\+Serie.\+h"{}}\newline
+{\ttfamily \#include "{}Emisora\+BLE.\+h"{}}\newline
+{\ttfamily \#include "{}Publicador.\+h"{}}\newline
+{\ttfamily \#include "{}Medidor.\+h"{}}\newline
+Gráfico de dependencias incluidas en Hola\+Mundo\+IBeacon.\+ino\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_hola_mundo_i_beacon_8ino__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Espacios de nombres}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_globales}{Globales}}
+\item 
+namespace \mbox{\hyperlink{namespace_loop}{Loop}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_hola_mundo_i_beacon_8ino_a555a607e0a0ed0a3f553843b6e96a5aa}{inicializar\+Plaquita}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa los componentes de la placa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_hola_mundo_i_beacon_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Configuración inicial del programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_hola_mundo_i_beacon_8ino_a27ffed2fef5d69b87e240022e59c59ff}{lucecitas}} ()
+\begin{DoxyCompactList}\small\item\em Parpadeo del \doxylink{class_l_e_d}{LED}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_hola_mundo_i_beacon_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Ciclo principal del programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_l_e_d}{LED}} \mbox{\hyperlink{namespace_globales_a51edb866c3039a7749728db080bce6de}{Globales\+::el\+LED}} (7)
+\begin{DoxyCompactList}\small\item\em Inicializa el \doxylink{class_l_e_d}{LED} en el pin 7. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_puerto_serie}{Puerto\+Serie}} \mbox{\hyperlink{namespace_globales_a3f62dccc88b29b77a840946142d28eb3}{Globales\+::el\+Puerto}} (115200)
+\begin{DoxyCompactList}\small\item\em Inicializa el puerto serie a 115200 baudios. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_publicador}{Publicador}} \mbox{\hyperlink{namespace_globales_af2c541012072e5d61fe17517e3e61980}{Globales\+::el\+Publicador}}
+\begin{DoxyCompactList}\small\item\em Inicializa el objeto \doxylink{class_publicador}{Publicador}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_medidor}{Medidor}} \mbox{\hyperlink{namespace_globales_ae99f35d2ec84b83cbbf433390e920956}{Globales\+::el\+Medidor}}
+\begin{DoxyCompactList}\small\item\em Inicializa el objeto \doxylink{class_medidor}{Medidor}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{namespace_loop_a41be37d8b3f6fee591134483a15b8987}{Loop\+::cont}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{_hola_mundo_i_beacon_8ino_a555a607e0a0ed0a3f553843b6e96a5aa}\index{HolaMundoIBeacon.ino@{HolaMundoIBeacon.ino}!inicializarPlaquita@{inicializarPlaquita}}
+\index{inicializarPlaquita@{inicializarPlaquita}!HolaMundoIBeacon.ino@{HolaMundoIBeacon.ino}}
+\doxysubsubsection{\texorpdfstring{inicializarPlaquita()}{inicializarPlaquita()}}
+{\footnotesize\ttfamily \label{_hola_mundo_i_beacon_8ino_a555a607e0a0ed0a3f553843b6e96a5aa} 
+void inicializar\+Plaquita (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa los componentes de la placa. 
+
+Esta función se utiliza para preparar los componentes que se usarán en el programa, aunque actualmente no realiza ninguna acción. Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{_hola_mundo_i_beacon_8ino_a555a607e0a0ed0a3f553843b6e96a5aa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_hola_mundo_i_beacon_8ino_afe461d27b9c48d5921c00d521181f12f}\index{HolaMundoIBeacon.ino@{HolaMundoIBeacon.ino}!loop@{loop}}
+\index{loop@{loop}!HolaMundoIBeacon.ino@{HolaMundoIBeacon.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_hola_mundo_i_beacon_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ciclo principal del programa. 
+
+Esta función se ejecuta repetidamente mientras el programa está en marcha. Se encarga de medir los valores de CO2 y temperatura, publicarlos, y manejar la emisión de i\+Beacon. Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_hola_mundo_i_beacon_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_hola_mundo_i_beacon_8ino_a27ffed2fef5d69b87e240022e59c59ff}\index{HolaMundoIBeacon.ino@{HolaMundoIBeacon.ino}!lucecitas@{lucecitas}}
+\index{lucecitas@{lucecitas}!HolaMundoIBeacon.ino@{HolaMundoIBeacon.ino}}
+\doxysubsubsection{\texorpdfstring{lucecitas()}{lucecitas()}}
+{\footnotesize\ttfamily \label{_hola_mundo_i_beacon_8ino_a27ffed2fef5d69b87e240022e59c59ff} 
+void lucecitas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parpadeo del \doxylink{class_l_e_d}{LED}. 
+
+Esta función hace que el \doxylink{class_l_e_d}{LED} parpadee en un patrón específico. Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_hola_mundo_i_beacon_8ino_a27ffed2fef5d69b87e240022e59c59ff_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{_hola_mundo_i_beacon_8ino_a27ffed2fef5d69b87e240022e59c59ff_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_hola_mundo_i_beacon_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{HolaMundoIBeacon.ino@{HolaMundoIBeacon.ino}!setup@{setup}}
+\index{setup@{setup}!HolaMundoIBeacon.ino@{HolaMundoIBeacon.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_hola_mundo_i_beacon_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Configuración inicial del programa. 
+
+Esta función se ejecuta una vez al inicio del programa. Se encarga de esperar a que el puerto serie esté disponible, inicializa la placa, activa la emisora BLE y comienza la medición de los valores. Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{_hola_mundo_i_beacon_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph}
+\end{center}
+\end{figure}

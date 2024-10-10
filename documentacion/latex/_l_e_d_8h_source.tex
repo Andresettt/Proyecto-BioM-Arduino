@@ -1,0 +1,77 @@
+\doxysection{LED.\+h}
+\hypertarget{_l_e_d_8h_source}{}\label{_l_e_d_8h_source}\index{HolaMundoIBeacon/LED.h@{HolaMundoIBeacon/LED.h}}
+\mbox{\hyperlink{_l_e_d_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ -\/*-\/\ mode:\ c++\ -\/*-\/}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ LED\_H\_INCLUIDO}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ LED\_H\_INCLUIDO}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Jordi\ Bataller\ i\ Mascarell}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ 2019-\/07-\/07}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_e_d_8h_a2fb17dd710d89b92e59a349551733fa0}{esperar}}(\textcolor{keywordtype}{long}\ tiempo)\ \{}
+\DoxyCodeLine{00018\ \ \ delay(tiempo);}
+\DoxyCodeLine{00019\ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_l_e_d}{LED}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_l_e_d_aa17a4e75c1a3aeb1835cccb36667138b}{numeroLED}};\ }
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_l_e_d_a24c773334fcf58613f20246a0f22640e}{encendido}};\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00035\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00040\ \ \ \mbox{\hyperlink{class_l_e_d_a027bcd6d546b47fd3ef22685ed1f73e2}{LED}}(\textcolor{keywordtype}{int}\ numero)}
+\DoxyCodeLine{00041\ \ \ \ \ :\ \mbox{\hyperlink{class_l_e_d_aa17a4e75c1a3aeb1835cccb36667138b}{numeroLED}}(numero),\ \mbox{\hyperlink{class_l_e_d_a24c773334fcf58613f20246a0f22640e}{encendido}}(false)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ pinMode(\mbox{\hyperlink{class_l_e_d_aa17a4e75c1a3aeb1835cccb36667138b}{numeroLED}},\ OUTPUT);\ \textcolor{comment}{//\ Configura\ el\ pin\ como\ salida.}}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a7f961959fa7405fec54de6121415db80}{apagar}}();\ \textcolor{comment}{//\ Asegura\ que\ el\ LED\ esté\ apagado\ al\ iniciar.}}
+\DoxyCodeLine{00044\ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00047\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_e_d_a58660bafc0f4d6016392feabac555812}{encender}}()\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ digitalWrite(\mbox{\hyperlink{class_l_e_d_aa17a4e75c1a3aeb1835cccb36667138b}{numeroLED}},\ HIGH);\ \textcolor{comment}{//\ Establece\ el\ pin\ en\ alto.}}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a24c773334fcf58613f20246a0f22640e}{encendido}}\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Cambia\ el\ estado\ a\ encendido.}}
+\DoxyCodeLine{00054\ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00057\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_e_d_a7f961959fa7405fec54de6121415db80}{apagar}}()\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ digitalWrite(\mbox{\hyperlink{class_l_e_d_aa17a4e75c1a3aeb1835cccb36667138b}{numeroLED}},\ LOW);\ \textcolor{comment}{//\ Establece\ el\ pin\ en\ bajo.}}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a24c773334fcf58613f20246a0f22640e}{encendido}}\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Cambia\ el\ estado\ a\ apagado.}}
+\DoxyCodeLine{00064\ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00067\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_e_d_a9b1361dbee5de756d142b1a2c3e685da}{alternar}}()\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_l_e_d_a24c773334fcf58613f20246a0f22640e}{encendido}})\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a7f961959fa7405fec54de6121415db80}{apagar}}();\ \textcolor{comment}{//\ Si\ está\ encendido,\ apágalo.}}
+\DoxyCodeLine{00074\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a58660bafc0f4d6016392feabac555812}{encender}}();\ \textcolor{comment}{//\ Si\ está\ apagado,\ enciéndelo.}}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00080\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_e_d_a7431e9efb39a2890f75b4e235b8f617e}{brillar}}(\textcolor{keywordtype}{long}\ tiempo)\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a58660bafc0f4d6016392feabac555812}{encender}}();\ \textcolor{comment}{//\ Enciende\ el\ LED.}}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{_l_e_d_8h_a2fb17dd710d89b92e59a349551733fa0}{esperar}}(tiempo);\ \textcolor{comment}{//\ Espera\ durante\ el\ tiempo\ especificado.}}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a7f961959fa7405fec54de6121415db80}{apagar}}();\ \textcolor{comment}{//\ Apaga\ el\ LED\ después\ de\ la\ espera.}}
+\DoxyCodeLine{00089\ \ \ \}}
+\DoxyCodeLine{00090\ \};\ \textcolor{comment}{//\ class}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LED\_H\_INCLUIDO}}
+
+\end{DoxyCode}

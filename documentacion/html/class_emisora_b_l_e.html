@@ -1,0 +1,667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto_BioM_Arduino: Referencia de la clase EmisoraBLE</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Proyecto_BioM_Arduino
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Tipos públicos</a> &#124;
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
+<a href="class_emisora_b_l_e-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la clase EmisoraBLE</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase para manejar una emisora Bluetooth Low Energy (BLE).  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Tipos públicos</h2></td></tr>
+<tr class="memitem:a922f7f1ab1063eb40c99e4a3676be258" id="r_a922f7f1ab1063eb40c99e4a3676be258"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</a> = void ( uint16_t connHandle )</td></tr>
+<tr class="memdesc:a922f7f1ab1063eb40c99e4a3676be258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipo de callback para la conexión establecida.  <br /></td></tr>
+<tr class="separator:a922f7f1ab1063eb40c99e4a3676be258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6faaf6a924a50ea027046703300b0b" id="r_afd6faaf6a924a50ea027046703300b0b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</a> = void ( uint16_t connHandle, uint8_t reason)</td></tr>
+<tr class="memdesc:afd6faaf6a924a50ea027046703300b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipo de callback para la conexión terminada.  <br /></td></tr>
+<tr class="separator:afd6faaf6a924a50ea027046703300b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:ae2e94b95bde4cddf0038deb0368cc5bf" id="r_ae2e94b95bde4cddf0038deb0368cc5bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2e94b95bde4cddf0038deb0368cc5bf">EmisoraBLE</a> (const char *nombreEmisora_, const uint16_t fabricanteID_, const int8_t txPower_)</td></tr>
+<tr class="memdesc:ae2e94b95bde4cddf0038deb0368cc5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase <a class="el" href="class_emisora_b_l_e.html" title="Clase para manejar una emisora Bluetooth Low Energy (BLE).">EmisoraBLE</a>.  <br /></td></tr>
+<tr class="separator:ae2e94b95bde4cddf0038deb0368cc5bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f9c768b91b9e353f693f509af3ea73" id="r_a31f9c768b91b9e353f693f509af3ea73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31f9c768b91b9e353f693f509af3ea73">encenderEmisora</a> ()</td></tr>
+<tr class="memdesc:a31f9c768b91b9e353f693f509af3ea73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enciende la emisora.  <br /></td></tr>
+<tr class="separator:a31f9c768b91b9e353f693f509af3ea73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada243f2f1185a7d66ea33de6bdb06590" id="r_ada243f2f1185a7d66ea33de6bdb06590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada243f2f1185a7d66ea33de6bdb06590">encenderEmisora</a> (<a class="el" href="#a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</a> cbce, <a class="el" href="#afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</a> cbct)</td></tr>
+<tr class="memdesc:ada243f2f1185a7d66ea33de6bdb06590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enciende la emisora y establece callbacks de conexión.  <br /></td></tr>
+<tr class="separator:ada243f2f1185a7d66ea33de6bdb06590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeede390b7a6502baecb48e9db77120b4" id="r_aeede390b7a6502baecb48e9db77120b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeede390b7a6502baecb48e9db77120b4">detenerAnuncio</a> ()</td></tr>
+<tr class="memdesc:aeede390b7a6502baecb48e9db77120b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detiene el anuncio si está activo.  <br /></td></tr>
+<tr class="separator:aeede390b7a6502baecb48e9db77120b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac32548698cf69ecef9e96941fc2e1b94" id="r_ac32548698cf69ecef9e96941fc2e1b94"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac32548698cf69ecef9e96941fc2e1b94">estaAnunciando</a> ()</td></tr>
+<tr class="memdesc:ac32548698cf69ecef9e96941fc2e1b94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si la emisora está anunciando.  <br /></td></tr>
+<tr class="separator:ac32548698cf69ecef9e96941fc2e1b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff23b85351177e685353b1ee92a1558f" id="r_aff23b85351177e685353b1ee92a1558f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff23b85351177e685353b1ee92a1558f">emitirAnuncioIBeacon</a> (uint8_t *beaconUUID, int16_t major, int16_t minor, uint8_t rssi)</td></tr>
+<tr class="memdesc:aff23b85351177e685353b1ee92a1558f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emite un anuncio iBeacon.  <br /></td></tr>
+<tr class="separator:aff23b85351177e685353b1ee92a1558f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8439d1e85ec8d630fcd33b01d8987d41" id="r_a8439d1e85ec8d630fcd33b01d8987d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8439d1e85ec8d630fcd33b01d8987d41">emitirAnuncioIBeaconLibre</a> (const char *carga, const uint8_t tamanyoCarga)</td></tr>
+<tr class="memdesc:a8439d1e85ec8d630fcd33b01d8987d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emite un anuncio iBeacon con carga libre.  <br /></td></tr>
+<tr class="separator:a8439d1e85ec8d630fcd33b01d8987d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9a9e94ea63dd29a1628ecce4b353b4" id="r_a8d9a9e94ea63dd29a1628ecce4b353b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d9a9e94ea63dd29a1628ecce4b353b4">instalarCallbackConexionEstablecida</a> (<a class="el" href="#a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</a> cbce)</td></tr>
+<tr class="memdesc:a8d9a9e94ea63dd29a1628ecce4b353b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instala el callback para la conexión establecida.  <br /></td></tr>
+<tr class="separator:a8d9a9e94ea63dd29a1628ecce4b353b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad370623ce6223212e1bbbb8c8eab9764" id="r_ad370623ce6223212e1bbbb8c8eab9764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad370623ce6223212e1bbbb8c8eab9764">instalarCallbackConexionTerminada</a> (<a class="el" href="#afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</a> cbct)</td></tr>
+<tr class="memdesc:ad370623ce6223212e1bbbb8c8eab9764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instala el callback para la conexión terminada.  <br /></td></tr>
+<tr class="separator:ad370623ce6223212e1bbbb8c8eab9764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:adc123f5bc5a383104ad2f4fd0315b089" id="r_adc123f5bc5a383104ad2f4fd0315b089"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc123f5bc5a383104ad2f4fd0315b089">nombreEmisora</a></td></tr>
+<tr class="memdesc:adc123f5bc5a383104ad2f4fd0315b089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de la emisora.  <br /></td></tr>
+<tr class="separator:adc123f5bc5a383104ad2f4fd0315b089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b97ebd2b35b10066f0857629c6b950" id="r_a67b97ebd2b35b10066f0857629c6b950"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67b97ebd2b35b10066f0857629c6b950">fabricanteID</a></td></tr>
+<tr class="memdesc:a67b97ebd2b35b10066f0857629c6b950"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID del fabricante.  <br /></td></tr>
+<tr class="separator:a67b97ebd2b35b10066f0857629c6b950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62d2364ae61d48e27ebe6da63732e0d" id="r_aa62d2364ae61d48e27ebe6da63732e0d"><td class="memItemLeft" align="right" valign="top">const int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa62d2364ae61d48e27ebe6da63732e0d">txPower</a></td></tr>
+<tr class="memdesc:aa62d2364ae61d48e27ebe6da63732e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Potencia de transmisión.  <br /></td></tr>
+<tr class="separator:aa62d2364ae61d48e27ebe6da63732e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase para manejar una emisora Bluetooth Low Energy (BLE). </p>
+</div><h2 class="groupheader">Documentación de los «Typedef» miembros de la clase</h2>
+<a id="a922f7f1ab1063eb40c99e4a3676be258" name="a922f7f1ab1063eb40c99e4a3676be258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a922f7f1ab1063eb40c99e4a3676be258">&#9670;&#160;</a></span>CallbackConexionEstablecida</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a922f7f1ab1063eb40c99e4a3676be258">EmisoraBLE::CallbackConexionEstablecida</a> = void ( uint16_t connHandle )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tipo de callback para la conexión establecida. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connHandle</td><td>Manejador de conexión. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afd6faaf6a924a50ea027046703300b0b" name="afd6faaf6a924a50ea027046703300b0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6faaf6a924a50ea027046703300b0b">&#9670;&#160;</a></span>CallbackConexionTerminada</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#afd6faaf6a924a50ea027046703300b0b">EmisoraBLE::CallbackConexionTerminada</a> = void ( uint16_t connHandle, uint8_t reason)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tipo de callback para la conexión terminada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connHandle</td><td>Manejador de conexión. </td></tr>
+    <tr><td class="paramname">reason</td><td>Razón de la desconexión. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a id="ae2e94b95bde4cddf0038deb0368cc5bf" name="ae2e94b95bde4cddf0038deb0368cc5bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2e94b95bde4cddf0038deb0368cc5bf">&#9670;&#160;</a></span>EmisoraBLE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EmisoraBLE::EmisoraBLE </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>nombreEmisora_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t</td>          <td class="paramname"><span class="paramname"><em>fabricanteID_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int8_t</td>          <td class="paramname"><span class="paramname"><em>txPower_</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor de la clase <a class="el" href="class_emisora_b_l_e.html" title="Clase para manejar una emisora Bluetooth Low Energy (BLE).">EmisoraBLE</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombreEmisora_</td><td>Nombre de la emisora. </td></tr>
+    <tr><td class="paramname">fabricanteID_</td><td>ID del fabricante. </td></tr>
+    <tr><td class="paramname">txPower_</td><td>Potencia de transmisión. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones miembro</h2>
+<a id="aeede390b7a6502baecb48e9db77120b4" name="aeede390b7a6502baecb48e9db77120b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeede390b7a6502baecb48e9db77120b4">&#9670;&#160;</a></span>detenerAnuncio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmisoraBLE::detenerAnuncio </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Detiene el anuncio si está activo. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_emisora_b_l_e_aeede390b7a6502baecb48e9db77120b4_icgraph.png" border="0" usemap="#aclass_emisora_b_l_e_aeede390b7a6502baecb48e9db77120b4_icgraph" alt=""/></div>
+<map name="aclass_emisora_b_l_e_aeede390b7a6502baecb48e9db77120b4_icgraph" id="aclass_emisora_b_l_e_aeede390b7a6502baecb48e9db77120b4_icgraph">
+<area shape="rect" title="Detiene el anuncio si está activo." alt="" coords="99,5,291,32"/>
+<area shape="rect" href="_hola_mundo_i_beacon_8ino.html#afe461d27b9c48d5921c00d521181f12f" title="Ciclo principal del programa." alt="" coords="5,5,51,32"/>
+<area shape="poly" title=" " alt="" coords="83,21,51,21,51,16,83,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aff23b85351177e685353b1ee92a1558f" name="aff23b85351177e685353b1ee92a1558f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff23b85351177e685353b1ee92a1558f">&#9670;&#160;</a></span>emitirAnuncioIBeacon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmisoraBLE::emitirAnuncioIBeacon </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>beaconUUID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>major</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>minor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>rssi</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Emite un anuncio iBeacon. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">beaconUUID</td><td>UUID del beacon. </td></tr>
+    <tr><td class="paramname">major</td><td>Número mayor del beacon. </td></tr>
+    <tr><td class="paramname">minor</td><td>Número menor del beacon. </td></tr>
+    <tr><td class="paramname">rssi</td><td>RSSI del beacon. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8439d1e85ec8d630fcd33b01d8987d41" name="a8439d1e85ec8d630fcd33b01d8987d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8439d1e85ec8d630fcd33b01d8987d41">&#9670;&#160;</a></span>emitirAnuncioIBeaconLibre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmisoraBLE::emitirAnuncioIBeaconLibre </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>carga</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t</td>          <td class="paramname"><span class="paramname"><em>tamanyoCarga</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Emite un anuncio iBeacon con carga libre. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">carga</td><td>Carga a enviar. </td></tr>
+    <tr><td class="paramname">tamanyoCarga</td><td>Tamaño de la carga. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_emisora_b_l_e_a8439d1e85ec8d630fcd33b01d8987d41_icgraph.png" border="0" usemap="#aclass_emisora_b_l_e_a8439d1e85ec8d630fcd33b01d8987d41_icgraph" alt=""/></div>
+<map name="aclass_emisora_b_l_e_a8439d1e85ec8d630fcd33b01d8987d41_icgraph" id="aclass_emisora_b_l_e_a8439d1e85ec8d630fcd33b01d8987d41_icgraph">
+<area shape="rect" title="Emite un anuncio iBeacon con carga libre." alt="" coords="99,5,280,48"/>
+<area shape="rect" href="_hola_mundo_i_beacon_8ino.html#afe461d27b9c48d5921c00d521181f12f" title="Ciclo principal del programa." alt="" coords="5,13,51,40"/>
+<area shape="poly" title=" " alt="" coords="83,29,51,29,51,24,83,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a31f9c768b91b9e353f693f509af3ea73" name="a31f9c768b91b9e353f693f509af3ea73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f9c768b91b9e353f693f509af3ea73">&#9670;&#160;</a></span>encenderEmisora() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmisoraBLE::encenderEmisora </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enciende la emisora. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_emisora_b_l_e_a31f9c768b91b9e353f693f509af3ea73_icgraph.png" border="0" usemap="#aclass_emisora_b_l_e_a31f9c768b91b9e353f693f509af3ea73_icgraph" alt=""/></div>
+<map name="aclass_emisora_b_l_e_a31f9c768b91b9e353f693f509af3ea73_icgraph" id="aclass_emisora_b_l_e_a31f9c768b91b9e353f693f509af3ea73_icgraph">
+<area shape="rect" title="Enciende la emisora." alt="" coords="257,5,460,32"/>
+<area shape="rect" href="class_emisora_b_l_e.html#ada243f2f1185a7d66ea33de6bdb06590" title="Enciende la emisora y establece callbacks de conexión." alt="" coords="5,5,209,32"/>
+<area shape="poly" title=" " alt="" coords="241,21,209,21,209,16,241,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ada243f2f1185a7d66ea33de6bdb06590" name="ada243f2f1185a7d66ea33de6bdb06590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada243f2f1185a7d66ea33de6bdb06590">&#9670;&#160;</a></span>encenderEmisora() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmisoraBLE::encenderEmisora </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</a></td>          <td class="paramname"><span class="paramname"><em>cbce</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</a></td>          <td class="paramname"><span class="paramname"><em>cbct</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enciende la emisora y establece callbacks de conexión. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cbce</td><td>Callback para conexión establecida. </td></tr>
+    <tr><td class="paramname">cbct</td><td>Callback para conexión terminada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_emisora_b_l_e_ada243f2f1185a7d66ea33de6bdb06590_cgraph.png" border="0" usemap="#aclass_emisora_b_l_e_ada243f2f1185a7d66ea33de6bdb06590_cgraph" alt=""/></div>
+<map name="aclass_emisora_b_l_e_ada243f2f1185a7d66ea33de6bdb06590_cgraph" id="aclass_emisora_b_l_e_ada243f2f1185a7d66ea33de6bdb06590_cgraph">
+<area shape="rect" title="Enciende la emisora y establece callbacks de conexión." alt="" coords="5,64,209,91"/>
+<area shape="rect" href="class_emisora_b_l_e.html#a31f9c768b91b9e353f693f509af3ea73" title="Enciende la emisora." alt="" coords="257,5,460,32"/>
+<area shape="poly" title=" " alt="" coords="167,61,283,33,284,39,168,66"/>
+<area shape="rect" href="class_emisora_b_l_e.html#a8d9a9e94ea63dd29a1628ecce4b353b4" title="Instala el callback para la conexión establecida." alt="" coords="261,56,456,99"/>
+<area shape="poly" title=" " alt="" coords="209,75,245,75,245,80,209,80"/>
+<area shape="rect" href="class_emisora_b_l_e.html#ad370623ce6223212e1bbbb8c8eab9764" title="Instala el callback para la conexión terminada." alt="" coords="261,123,456,165"/>
+<area shape="poly" title=" " alt="" coords="161,89,261,116,260,121,160,94"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac32548698cf69ecef9e96941fc2e1b94" name="ac32548698cf69ecef9e96941fc2e1b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac32548698cf69ecef9e96941fc2e1b94">&#9670;&#160;</a></span>estaAnunciando()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EmisoraBLE::estaAnunciando </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifica si la emisora está anunciando. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si está anunciando, false en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a id="a8d9a9e94ea63dd29a1628ecce4b353b4" name="a8d9a9e94ea63dd29a1628ecce4b353b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9a9e94ea63dd29a1628ecce4b353b4">&#9670;&#160;</a></span>instalarCallbackConexionEstablecida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmisoraBLE::instalarCallbackConexionEstablecida </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</a></td>          <td class="paramname"><span class="paramname"><em>cbce</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instala el callback para la conexión establecida. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cbce</td><td>Callback de conexión establecida. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_emisora_b_l_e_a8d9a9e94ea63dd29a1628ecce4b353b4_icgraph.png" border="0" usemap="#aclass_emisora_b_l_e_a8d9a9e94ea63dd29a1628ecce4b353b4_icgraph" alt=""/></div>
+<map name="aclass_emisora_b_l_e_a8d9a9e94ea63dd29a1628ecce4b353b4_icgraph" id="aclass_emisora_b_l_e_a8d9a9e94ea63dd29a1628ecce4b353b4_icgraph">
+<area shape="rect" title="Instala el callback para la conexión establecida." alt="" coords="257,5,452,48"/>
+<area shape="rect" href="class_emisora_b_l_e.html#ada243f2f1185a7d66ea33de6bdb06590" title="Enciende la emisora y establece callbacks de conexión." alt="" coords="5,13,209,40"/>
+<area shape="poly" title=" " alt="" coords="241,29,209,29,209,24,241,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad370623ce6223212e1bbbb8c8eab9764" name="ad370623ce6223212e1bbbb8c8eab9764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad370623ce6223212e1bbbb8c8eab9764">&#9670;&#160;</a></span>instalarCallbackConexionTerminada()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EmisoraBLE::instalarCallbackConexionTerminada </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</a></td>          <td class="paramname"><span class="paramname"><em>cbct</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instala el callback para la conexión terminada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cbct</td><td>Callback de conexión terminada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_emisora_b_l_e_ad370623ce6223212e1bbbb8c8eab9764_icgraph.png" border="0" usemap="#aclass_emisora_b_l_e_ad370623ce6223212e1bbbb8c8eab9764_icgraph" alt=""/></div>
+<map name="aclass_emisora_b_l_e_ad370623ce6223212e1bbbb8c8eab9764_icgraph" id="aclass_emisora_b_l_e_ad370623ce6223212e1bbbb8c8eab9764_icgraph">
+<area shape="rect" title="Instala el callback para la conexión terminada." alt="" coords="257,5,452,48"/>
+<area shape="rect" href="class_emisora_b_l_e.html#ada243f2f1185a7d66ea33de6bdb06590" title="Enciende la emisora y establece callbacks de conexión." alt="" coords="5,13,209,40"/>
+<area shape="poly" title=" " alt="" coords="241,29,209,29,209,24,241,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de datos miembro</h2>
+<a id="a67b97ebd2b35b10066f0857629c6b950" name="a67b97ebd2b35b10066f0857629c6b950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67b97ebd2b35b10066f0857629c6b950">&#9670;&#160;</a></span>fabricanteID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint16_t EmisoraBLE::fabricanteID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ID del fabricante. </p>
+
+</div>
+</div>
+<a id="adc123f5bc5a383104ad2f4fd0315b089" name="adc123f5bc5a383104ad2f4fd0315b089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc123f5bc5a383104ad2f4fd0315b089">&#9670;&#160;</a></span>nombreEmisora</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* EmisoraBLE::nombreEmisora</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Nombre de la emisora. </p>
+
+</div>
+</div>
+<a id="aa62d2364ae61d48e27ebe6da63732e0d" name="aa62d2364ae61d48e27ebe6da63732e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa62d2364ae61d48e27ebe6da63732e0d">&#9670;&#160;</a></span>txPower</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int8_t EmisoraBLE::txPower</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Potencia de transmisión. </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>HolaMundoIBeacon/<a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

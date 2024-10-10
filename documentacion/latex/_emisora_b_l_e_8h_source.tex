@@ -1,0 +1,206 @@
+\doxysection{Emisora\+BLE.\+h}
+\hypertarget{_emisora_b_l_e_8h_source}{}\label{_emisora_b_l_e_8h_source}\index{HolaMundoIBeacon/EmisoraBLE.h@{HolaMundoIBeacon/EmisoraBLE.h}}
+\mbox{\hyperlink{_emisora_b_l_e_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ -\/*-\/\ mode:\ c++\ -\/*-\/}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Jordi\ Bataller\ i\ Mascarell}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ 2019-\/07-\/07}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ EMISORA\_H\_INCLUIDO}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ EMISORA\_H\_INCLUIDO}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Buena\ introducción:\ https://learn.adafruit.com/introduction-\/to-\/bluetooth-\/low-\/energy/gap}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ https://os.mbed.com/blog/entry/BLE-\/Beacons-\/URIBeacon-\/AltBeacons-\/iBeacon/}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ fuente:\ https://www.instructables.com/id/Beaconeddystone-\/and-\/Adafruit-\/NRF52-\/Advertise-\/Your-\//}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ https://github.com/nkolban/ESP32\_BLE\_Arduino/blob/master/src/BLEBeacon.h}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ https://os.mbed.com/blog/entry/BLE-\/Beacons-\/URIBeacon-\/AltBeacons-\/iBeacon/}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ https://learn.adafruit.com/bluefruit-\/nrf52-\/feather-\/learning-\/guide/bleadvertising}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_servicio_en_emisora_8h}{ServicioEnEmisora.h}}"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_emisora_b_l_e}{EmisoraBLE}}\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{class_emisora_b_l_e_adc123f5bc5a383104ad2f4fd0315b089}{nombreEmisora}};\ }
+\DoxyCodeLine{00032\ \ \ \textcolor{keyword}{const}\ uint16\_t\ \mbox{\hyperlink{class_emisora_b_l_e_a67b97ebd2b35b10066f0857629c6b950}{fabricanteID}};\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{keyword}{const}\ int8\_t\ \mbox{\hyperlink{class_emisora_b_l_e_aa62d2364ae61d48e27ebe6da63732e0d}{txPower}};\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00038\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_emisora_b_l_e_a922f7f1ab1063eb40c99e4a3676be258}{CallbackConexionEstablecida}}\ =\ void\ (\ uint16\_t\ connHandle\ );}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_emisora_b_l_e_afd6faaf6a924a50ea027046703300b0b}{CallbackConexionTerminada}}\ =\ void\ (\ uint16\_t\ connHandle,\ uint8\_t\ reason);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00053\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00060\ \ \ \mbox{\hyperlink{class_emisora_b_l_e_ae2e94b95bde4cddf0038deb0368cc5bf}{EmisoraBLE}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ nombreEmisora\_,\ \textcolor{keyword}{const}\ uint16\_t\ fabricanteID\_,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ int8\_t\ txPower\_\ )\ }
+\DoxyCodeLine{00062\ \ \ \ \ :}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_adc123f5bc5a383104ad2f4fd0315b089}{nombreEmisora}}(\ nombreEmisora\_\ )\ ,}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_a67b97ebd2b35b10066f0857629c6b950}{fabricanteID}}(\ fabricanteID\_\ )\ ,}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_aa62d2364ae61d48e27ebe6da63732e0d}{txPower}}(\ txPower\_\ )}
+\DoxyCodeLine{00066\ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//\ no\ encender\ ahora\ la\ emisora,\ tal\ vez\ sea\ por\ el\ println()}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ que\ hace\ que\ todo\ falle\ si\ lo\ llamo\ en\ el\ contructor}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ (\ =\ antes\ que\ configuremos\ Serial\ )}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ No\ parece\ que\ sea\ por\ el\ println,}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ por\ tanto\ NO\_encenderEmisora();}}
+\DoxyCodeLine{00072\ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00075\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00079\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_a31f9c768b91b9e353f693f509af3ea73}{encenderEmisora}}()\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ Serial.println\ (\ "{}Bluefruit.begin()\ "{}\ );}}
+\DoxyCodeLine{00081\ \ \ \ \ Bluefruit.begin();\ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ por\ si\ acaso:}}
+\DoxyCodeLine{00084\ \ \ \ \ (*this).detenerAnuncio();}
+\DoxyCodeLine{00085\ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00088\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_ada243f2f1185a7d66ea33de6bdb06590}{encenderEmisora}}(\ \mbox{\hyperlink{class_emisora_b_l_e_a922f7f1ab1063eb40c99e4a3676be258}{CallbackConexionEstablecida}}\ cbce,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_afd6faaf6a924a50ea027046703300b0b}{CallbackConexionTerminada}}\ cbct\ )\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_a31f9c768b91b9e353f693f509af3ea73}{encenderEmisora}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_a8d9a9e94ea63dd29a1628ecce4b353b4}{instalarCallbackConexionEstablecida}}(\ cbce\ );}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_ad370623ce6223212e1bbbb8c8eab9764}{instalarCallbackConexionTerminada}}(\ cbct\ );}
+\DoxyCodeLine{00099\ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00102\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_aeede390b7a6502baecb48e9db77120b4}{detenerAnuncio}}()\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ (*this).estaAnunciando()\ )\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \textcolor{comment}{//\ Serial.println\ (\ "{}Bluefruit.Advertising.stop()\ "{}\ );}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ Bluefruit.Advertising.stop();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \}\ \ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{00112\ \ \ }
+\DoxyCodeLine{00113\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00114\ \ \ \textcolor{comment}{//\ estaAnunciando()\ -\/>\ Boleano}}
+\DoxyCodeLine{00115\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00120\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_emisora_b_l_e_ac32548698cf69ecef9e96941fc2e1b94}{estaAnunciando}}()\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordflow}{return}\ Bluefruit.Advertising.isRunning();}
+\DoxyCodeLine{00122\ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00125\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_aff23b85351177e685353b1ee92a1558f}{emitirAnuncioIBeacon}}(\ uint8\_t\ *\ beaconUUID,\ int16\_t\ major,\ int16\_t\ minor,\ uint8\_t\ rssi\ )\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ (*this).detenerAnuncio();}
+\DoxyCodeLine{00135\ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//\ creo\ el\ beacon\ }}
+\DoxyCodeLine{00137\ \ \ \ \ BLEBeacon\ elBeacon(\ beaconUUID,\ major,\ minor,\ rssi\ );}
+\DoxyCodeLine{00138\ \ \ \ \ elBeacon.setManufacturer(\ (*this).fabricanteID\ );}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ parece\ que\ esto\ debe\ ponerse\ todo\ aquí}}
+\DoxyCodeLine{00141\ \ \ \ \ Bluefruit.setTxPower(\ (*this).txPower\ );}
+\DoxyCodeLine{00142\ \ \ \ \ Bluefruit.setName(\ (*this).nombreEmisora\ );}
+\DoxyCodeLine{00143\ \ \ \ \ Bluefruit.ScanResponse.addName();\ \textcolor{comment}{//\ para\ que\ envíe\ el\ nombre\ de\ emisora\ (?!)}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//\ pongo\ el\ beacon}}
+\DoxyCodeLine{00146\ \ \ \ \ Bluefruit.Advertising.setBeacon(\ elBeacon\ );}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//\ ?\ qué\ valorers\ poner\ aquí}}
+\DoxyCodeLine{00149\ \ \ \ \ Bluefruit.Advertising.restartOnDisconnect(\textcolor{keyword}{true});\ \textcolor{comment}{//\ no\ hace\ falta,\ pero\ lo\ pongo}}
+\DoxyCodeLine{00150\ \ \ \ \ Bluefruit.Advertising.setInterval(100,\ 100);\ \ \ \ \textcolor{comment}{//\ en\ unidad\ de\ 0.625\ ms}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{comment}{//\ empieza\ el\ anuncio,\ 0\ =\ tiempo\ indefinido\ (ya\ lo\ pararán)}}
+\DoxyCodeLine{00153\ \ \ \ \ Bluefruit.Advertising.start(\ 0\ );\ }
+\DoxyCodeLine{00154\ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00157\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00158\ \ \ \textcolor{comment}{//\ Ejemplo\ de\ Beacon\ (31\ bytes)}}
+\DoxyCodeLine{00159\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00160\ \ \ \textcolor{comment}{//\ https://os.mbed.com/blog/entry/BLE-\/Beacons-\/URIBeacon-\/AltBeacons-\/iBeacon/}}
+\DoxyCodeLine{00161\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00162\ \ \ \textcolor{comment}{//\ El\ prefijo\ de\ iBeacon\ contiene\ los\ datos\ hexadecimales:\ 0x0201061AFF004C0215.\ }}
+\DoxyCodeLine{00163\ \ \ \textcolor{comment}{//\ Se\ desglosa\ como\ sigue:}}
+\DoxyCodeLine{00164\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00165\ \ \ \textcolor{comment}{//\ 0x020106\ define\ el\ paquete\ de\ publicidad\ como\ BLE\ General\ Discoverable\ }}
+\DoxyCodeLine{00166\ \ \ \textcolor{comment}{//\ y\ BR/EDR\ incompatible\ de\ alta\ velocidad.}}
+\DoxyCodeLine{00167\ \ \ \textcolor{comment}{//\ Efectivamente\ dice\ que\ esto\ solo\ está\ transmitiendo,\ no\ conectando.}}
+\DoxyCodeLine{00168\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00169\ \ \ \textcolor{comment}{//\ 0x1AFF\ dice\ que\ los\ siguientes\ datos\ son\ de\ longitud\ 26\ bytes\ y\ son\ datos\ específicos\ del\ fabricante.}}
+\DoxyCodeLine{00170\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00171\ \ \ \textcolor{comment}{//\ 0x004C\ es\ el\ ID\ de\ Bluetooth\ Sig\ de\ Apple\ y\ es\ parte\ de\ esta\ especificación\ que\ lo\ hace\ dependiente\ de\ Apple.}}
+\DoxyCodeLine{00172\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00173\ \ \ \textcolor{comment}{//\ 0x02\ es\ un\ ID\ secundario\ que\ denota\ un\ beacon\ de\ proximidad,\ que\ es\ utilizado\ por\ todos\ los\ iBeacons.}}
+\DoxyCodeLine{00174\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00175\ \ \ \textcolor{comment}{//\ 0x15\ define\ la\ longitud\ restante\ como\ 21\ bytes\ (16+2+2+1).}}
+\DoxyCodeLine{00176\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00177\ \ \ \textcolor{comment}{//\ Ejemplo:}}
+\DoxyCodeLine{00178\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00179\ \ \ \textcolor{comment}{//\ 1.\ prefijo:\ 9bytes}}
+\DoxyCodeLine{00180\ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ 0x02,\ 0x01,\ 0x06,\ \ \ \ \ \ \ //\ advFlags\ 3bytes}}
+\DoxyCodeLine{00181\ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ 0x1a,\ 0xff,\ \ \ \ \ \ \ \ \ \ \ \ \ //\ advHeader\ 2\ (0x1a\ =\ 26\ =\ 25(longitud\ de\ 0x4c\ a\ 0xca)+1)\ 0xFF\ -\/>\ BLE\_GAP\_AD\_TYPE\_MANUFACTURER\_SPECIFIC\_DATA}}
+\DoxyCodeLine{00182\ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ 0x4c,\ 0x00,\ \ \ \ \ \ \ \ \ \ \ \ \ //\ companyID\ 2bytes}}
+\DoxyCodeLine{00183\ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ 0x02,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ ibeacon\ type\ 1\ byte}}
+\DoxyCodeLine{00184\ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ 0x15,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ ibeacon\ length\ 1\ byte\ (dec=21\ lo\ que\ va\ a\ continuación:\ desde\ la\ 'f'\ hasta\ 0x01)}}
+\DoxyCodeLine{00185\ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00186\ \ \ \textcolor{comment}{//\ 2.\ uuid:\ 16bytes}}
+\DoxyCodeLine{00187\ \ \ \textcolor{comment}{//\ 'f',\ 'i',\ 's',\ 't',\ 'r',\ 'o',\ 'f',\ 'i',\ 's',\ 't',\ 'r',\ 'o',\ 0xa7,\ 0x10,\ 0x96,\ 0xe0}}
+\DoxyCodeLine{00188\ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00189\ \ \ \textcolor{comment}{//\ 2\ major:\ 2bytes}}
+\DoxyCodeLine{00190\ \ \ \textcolor{comment}{//\ 0x04,\ 0xd2,}}
+\DoxyCodeLine{00191\ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00192\ \ \ \textcolor{comment}{//\ minor:\ 2bytes}}
+\DoxyCodeLine{00193\ \ \ \textcolor{comment}{//\ 0x10,\ 0xe1,}}
+\DoxyCodeLine{00194\ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00195\ \ \ \textcolor{comment}{//\ 0xca,\ //\ tx\ power\ :\ 1bytes}}
+\DoxyCodeLine{00196\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00197\ \ \ \textcolor{comment}{//\ 0x01,\ //\ este\ es\ el\ byte\ 31\ =\ BLE\_GAP\_ADV\_SET\_DATA\_SIZE\_MAX,\ parece\ que\ sobra}}
+\DoxyCodeLine{00198\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00199\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00200\ \ \ \textcolor{comment}{//\ Para\ enviar\ como\ carga\ libre\ los\ últimos\ 21\ bytes\ de\ un\ iBeacon\ (lo\ que\ normalmente\ sería\ uuid-\/16\ major-\/2\ minor-\/2\ txPower-\/1)}}
+\DoxyCodeLine{00201\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00202\ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00203\ \textcolor{comment}{\ \ void\ emitirAnuncioIBeaconLibre(\ const\ char\ *\ carga\ )\ \{}}
+\DoxyCodeLine{00204\ \textcolor{comment}{}}
+\DoxyCodeLine{00205\ \textcolor{comment}{\ \ \ \ const\ uint8\_t\ tamanyoCarga\ =\ strlen(\ carga\ );}}
+\DoxyCodeLine{00206\ \textcolor{comment}{\ \ */}}
+\DoxyCodeLine{00212\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_a8439d1e85ec8d630fcd33b01d8987d41}{emitirAnuncioIBeaconLibre}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ carga,\ \textcolor{keyword}{const}\ uint8\_t\ tamanyoCarga\ )\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ (*this).detenerAnuncio();\ }
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ Bluefruit.Advertising.clearData();}
+\DoxyCodeLine{00216\ \ \ \ \ Bluefruit.ScanResponse.clearData();\ \textcolor{comment}{//\ Elimina\ datos\ de\ respuesta.}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//\ Establece\ el\ tamaño\ de\ carga\ en\ bytes\ (debe\ ser\ menor\ o\ igual\ a\ 21).}}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ tamanyoCarga\ <=\ 21\ )\ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \textcolor{comment}{//\ Serial.print\ (\ "{}carga:\ "{}\ );}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \textcolor{comment}{//\ Serial.println\ (\ carga\ );}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ Bluefruit.Advertising.addData(\ carga,\ tamanyoCarga\ );\ \textcolor{comment}{//\ Carga}}
+\DoxyCodeLine{00223\ \ \ \ \ \}}
+\DoxyCodeLine{00224\ \ \ \ \ }
+\DoxyCodeLine{00225\ \ \ \ \ Bluefruit.Advertising.restartOnDisconnect(\textcolor{keyword}{true});\ \textcolor{comment}{//\ Si\ hay\ desconexión,\ se\ reinicia.}}
+\DoxyCodeLine{00226\ \ \ \ \ Bluefruit.Advertising.setInterval(100,\ 100);\ \textcolor{comment}{//\ Establece\ intervalo\ de\ anuncio.}}
+\DoxyCodeLine{00227\ \ \ \ \ Bluefruit.Advertising.start(\ 0\ );\ \textcolor{comment}{//\ Inicia\ el\ anuncio\ indefinidamente.}}
+\DoxyCodeLine{00228\ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{00229\ \ \ }
+\DoxyCodeLine{00230\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00231\ \ \ \textcolor{comment}{//\ Instalador\ de\ callbacks\ de\ conexión\ establecida}}
+\DoxyCodeLine{00232\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00237\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_a8d9a9e94ea63dd29a1628ecce4b353b4}{instalarCallbackConexionEstablecida}}(\ \mbox{\hyperlink{class_emisora_b_l_e_a922f7f1ab1063eb40c99e4a3676be258}{CallbackConexionEstablecida}}\ cbce\ )\ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{comment}{//\ callback\ para\ conexiones:}}
+\DoxyCodeLine{00239\ \ \ \ \ Bluefruit.Connection.setConnCallback(\ cbce\ );\ }
+\DoxyCodeLine{00240\ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00243\ \ \ \textcolor{comment}{//\ Instalador\ de\ callbacks\ de\ conexión\ terminada}}
+\DoxyCodeLine{00244\ \ \ \textcolor{comment}{//\ .........................................................}}
+\DoxyCodeLine{00249\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_ad370623ce6223212e1bbbb8c8eab9764}{instalarCallbackConexionTerminada}}(\ \mbox{\hyperlink{class_emisora_b_l_e_afd6faaf6a924a50ea027046703300b0b}{CallbackConexionTerminada}}\ cbct\ )\ \{}
+\DoxyCodeLine{00250\ \ \ \ \ Bluefruit.Connection.setDisconnCallback(\ cbct\ );\ }
+\DoxyCodeLine{00251\ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{00252\ \};\ \textcolor{comment}{//\ class\ EmisoraBLE}}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EMISORA\_H\_INCLUIDO}}
+
+\end{DoxyCode}

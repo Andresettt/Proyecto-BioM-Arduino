@@ -1,0 +1,5 @@
+<map id="Publicador::publicarTemperatura" name="Publicador::publicarTemperatura">
+<area shape="rect" id="Node000001" title="Publica el valor de temperatura mediante un anuncio IBeacon." alt="" coords="5,5,213,32"/>
+<area shape="rect" id="Node000002" href="$_l_e_d_8h.html#a2fb17dd710d89b92e59a349551733fa0" title="Pausa la ejecución durante un tiempo especificado." alt="" coords="261,5,325,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,16,245,16,245,21,213,21"/>
+</map>
